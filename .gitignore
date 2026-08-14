@@ -12,3 +12,18 @@ plugin/node_modules/
 .idea/
 .DS_Store
 Thumbs.db
+
+# ---- 本地敏感配置（绝不提交）----
+# DeepSeek Harness 用户数据与凭据
+.dsh/
+settings.yaml
+.credentials.yaml
+credentials.yaml
+# 通用密钥文件
+.env
+.env.*
+*.pem
+*.key
+# 真实 API key 特征
+*api_key*
+*apikey*
