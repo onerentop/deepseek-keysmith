@@ -27,3 +27,6 @@ credentials.yaml
 # 真实 API key 特征
 *api_key*
 *apikey*
+# npm 缓存误提交防护
+plugin/%USERPROFILE*/
+plugin/npm-cache*/

@@ -133,7 +133,7 @@ const evaluated = evaluate({ dshHomePath: (...s) => path.join(home, ...s) }, exp
 const systemFile = evaluated && typeof evaluated === 'object' ? evaluated.systemFile : evaluated
 if (typeof systemFile !== 'string' || !fs.existsSync(systemFile)) throw new Error('systemFile eval missing: ' + systemFile)
 const plugin = require(pluginPath)
-if (plugin.name !== 'keysmith:system-role') throw new Error('plugin name mismatch')
+if (plugin.name !== 'keysmith') throw new Error('plugin name mismatch')
 if (!Array.isArray(plugin.inject) || !plugin.inject.includes('systemPrompt')) throw new Error('inject mismatch')
 // dsh's fiber resolves plugin config through runtime.Config['~standard'].validate()
 // (vendor/cordis/src/fiber.ts resolveConfig). Without it the boot crashes.
@@ -186,7 +186,7 @@ def test_plugin_bundle_is_valid_and_self_contained(tmp_path):
     # Schemastery standard-schema Config.
     probe = f"""
 const p = require({str(plugin_file)!r})
-if (p.name !== 'keysmith:system-role') throw new Error('name mismatch')
+if (p.name !== 'keysmith') throw new Error('name mismatch')
 if (!Array.isArray(p.inject) || !p.inject.includes('systemPrompt')) throw new Error('inject mismatch')
 if (!p.Config || typeof p.Config['~standard']?.validate !== 'function') throw new Error('Config ~standard missing')
 const ok = p.Config['~standard'].validate({{ systemFile: 'C:/x.md' }})

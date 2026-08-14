@@ -25,8 +25,8 @@ import z from '@deepseek-ai/schemastery'
 // declares `ctx.systemPrompt` (the SystemPrompt service).
 import type {} from '@deepseek-ai/dsh-system-prompt'
 
-/** Stable Cordis plugin name. */
-export const name = 'keysmith:system-role'
+/** Stable Cordis plugin name (dsh convention: kebab-case, no colons). */
+export const name = 'keysmith'
 
 /** The prompt registry this plugin contributes to. */
 export const inject = ['systemPrompt']

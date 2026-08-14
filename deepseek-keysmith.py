@@ -58,7 +58,7 @@ DEFAULT_HOME_PATCH_NAME = "cordis.patch.yml"
 # reinstall patches the same row instead of appending duplicates.
 PATCH_ROW_ID = "keysmith"
 # Plugin-internal Cordis plugin name (exports.name of plugin.cjs).
-PATCH_PLUGIN_NAME = "keysmith:system-role"
+PATCH_PLUGIN_NAME = "keysmith"
 
 # Ordered system-prompt section slot: persona is 0, tool guidance is 100+.
 PERSONA_ORDER = 0

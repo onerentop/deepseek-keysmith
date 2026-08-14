@@ -873,7 +873,7 @@ defineMethod("transform", ["inner", "callback", "preserve"], ({ inner }, isInner
 var src_default = Schema;
 
 // src/index.ts
-var name = "keysmith:system-role";
+var name = "keysmith";
 var inject = ["systemPrompt"];
 var SECTION_NAME = "managed:keysmith";
 var SECTION_ORDER = 5;
